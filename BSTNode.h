@@ -22,10 +22,10 @@ class BSTNode {
 protected:
 
     int data ;
-    std::string olelo, 
-    std::string english, 
-    std::string explanation, 
-    std::string color
+    std::string olelo; 
+    std::string english; 
+    std::string explanation; 
+    std::string color;
     BSTNode* left;
     BSTNode* right;
     BSTNode* parent;
@@ -65,11 +65,11 @@ public:   ///////////////////// Constructors & Destructors /////////////////////
 
     void setData ( int newData );
     void setOlelo ( std::string newOlelo ); 
-    void setEnglish ( std::string newEngilsh );
+    void setEnglish ( std::string newEnglish );
     void setExplanation ( std::string newExplanation );
     void setColor ( std::string newColor );
     void setLeft  ( BSTNode* newLeft );
     void setRight ( BSTNode* newRight  );
-    void setParent ( BSTNode* newParet );
+    void setParent ( BSTNode* newParent );
 
 };

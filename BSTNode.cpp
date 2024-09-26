@@ -6,7 +6,7 @@
 using namespace std;
 
 ///////////////// Constructors and Destructor //////////////////////
-explicit BSTNode( int newData ) {
+explicit BSTNode::BSTNode( int newData ) {
 
     data = newData;
     olelo = "";
@@ -38,7 +38,7 @@ BSTNode::BSTNode( int newData,
 }; 
     
     
-~BSTNode(); /// Destructor to free data
+BSTNode::~BSTNode(); /// Destructor to free data
 
 
 
@@ -52,10 +52,10 @@ BSTNode::BSTNode( int newData,
     english = "";
     explanation = "";
     color = "";
-    lesser = newLesser;
-    greater = newGreater;
-    data = newData;
-}
+    left = newLeft;
+    right = newRight;
+    parent = newParent;
+};
 
 
 BSTNode::~BSTNode() {
@@ -70,43 +70,51 @@ void BSTNode::reset() noexcept {
 }
 
 
-int getData () const {
+int BSTNode::getData () const {
     return data;
 };
 
-std::string getOlelo () {
+std::string BSTNode::getOlelo () {
     return olelo;
 };
 
-std::string getEnglish () {
+std::string BSTNode::getEnglish () {
     return english;
 };
 
-std::string getExplanation () {
+std::string BSTNode::getExplanation () {
     return explanation;
 };
 
-std::string getColor () {
+std::string BSTNode::getColor () {
     return color;
 };
 
-BSTNode* getLeft () {
+BSTNode* BSTNode::getLeft () {
     return left;
 };
 
-BSTNode* getRight () {
+BSTNode* BSTNode::getRight () {
     return right;
 };
 
-BSTNode* getParent () {
+BSTNode* BSTNode::getParent () {
     return parent;
 };
 
-void setData ( int newData );
-void setOlelo ( std::string newOlelo ); 
-void setEnglish ( std::string newEngilsh );
-void setExplanation ( std::string newExplanation );
-void setColor ( std::string newColor );
-void setLeft  ( BSTNode* newLeft );
-void setRight ( BSTNode* newRight  );
-void setParent ( BSTNode* newParet );
+void BSTNode::setData ( int newData ) {
+    data = newData;
+};
+
+void BSTNode::setOlelo ( std::string newOlelo ){
+    olelo = newOlelo;
+}; 
+
+void BSTNode::setEnglish ( std::string newEnglish ) {
+    english = newEnglish;
+};
+void BSTNode::setExplanation ( std::string newExplanation );
+void BSTNode::setColor ( std::string newColor );
+void BSTNode::setLeft  ( BSTNode* newLeft );
+void BSTNode::setRight ( BSTNode* newRight  );
+void BSTNode::setParent ( BSTNode* newParet );
